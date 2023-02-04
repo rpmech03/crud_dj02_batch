@@ -1,0 +1,10 @@
+<h1>show joined</h1>
+{%for message in messages%}
+
+<script>
+    {%if message.tags%}
+    window.alert('{{message}}');
+    {%endif%}
+</script>
+
+{%endfor%}

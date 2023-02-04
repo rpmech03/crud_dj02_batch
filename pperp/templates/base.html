@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.head
+		{
+			height: 90px;
+			width: 100%;
+			background-color: purple;
+			padding-top: 1px;
+		}
+		.main
+		{
+			height: 640px;
+			width: 100%;
+			background-color: black;
+		}
+		.left
+		{
+			height: 100%;
+			width: 20%;
+			background-color: grey;
+			float: left;
+		}
+		.ryt
+		{
+			height: 100%;
+			width: 80%;
+			background-color: lightgrey;
+			float: left;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+<div class="head">
+	<h1 align="center">Programmers Point</h1>
+</div>
+<div class="main">
+	<div class="left">
+		<table align="center" border="1px" style="width: 100%;text-align: center">
+			<tr><td><a href="/" style="color: white;text-decoration: none;font-size: 30px">Add Student</a></td></tr>
+			<tr><td><a href="showstudents" style="color: white;text-decoration: none;font-size: 30px">Show Students</a></td></tr>
+			<tr><td><a href="searchstudent" style="color: white;text-decoration: none;font-size: 30px">Search Students</a></td></tr>
+			<tr><td><a href="joinstudent" style="color: white;text-decoration: none;font-size: 30px">Join New Student</a></td></tr>
+			<tr><td><a href="showjoinstudents" style="color: white;text-decoration: none;font-size: 30px">Show Joined Student</a></td></tr>
+			<tr><td><a href="searchjoinedstudents" style="color: white;text-decoration: none;font-size: 30px">Search Joined Students</a></td></tr>
+		</table>
+	</div>
+	<div class="ryt">
+		<div style="margin: 35px">
+            {%block content%}
+
+            {%endblock%}
+		</div>
+	</div>
+</div>
+</body>
+</html>

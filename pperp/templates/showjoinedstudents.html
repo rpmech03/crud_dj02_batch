@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1 align="center">Joined Students Detail</h1>
+<table align="center" border="1px">
+<tr>
+    <th>Student</th>
+    <th>student_mob</th>    
+    <th>Joined_dt</th>
+    <th>Course</th>
+    <th>Total_fee</th>
+    <th>First_inst</th>
+    <th>First_ins_dt</th>
+    <th>Last_inst</th>
+    <th>Last_inst_dt</th>
+    <th>Duration</th>
+    <th>Dues</th>
+</tr>
+{%for i in joined%}
+<tr>
+    <form action="updatejoined" method="post" >
+    {%csrf_token%}
+    <td>{{i.student.name}}<input type="hidden" name="id" value="{{i.id}}"/></td>
+    <td>{{i.student.mob}}</td>
+    <td>{{i.joined_dt}}</td>
+    <td>{{i.student.course}}</td>
+    <td>{{i.total}}</td>
+    <td>{{i.first_ins}}</td>
+    <td>{{i.first_dt}}</td>
+    <td><input type="number" name="last_ins" value="{{i.last_ins}}"/></td>
+    <td><input value="{{i}}" type="date" name="last_dt" /></td>
+    <td>{{i.duration}}</td>
+    <td><input type="number" name="dues" value="{{i.dues}}"/></td>
+    <td><input type="submit" value="Update" /></td>
+    </form>
+</tr>
+{%endfor%}
+</table>
+{%endblock%}

@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+{%block content%}
+
+<h1 align="center">Search Joined Student</h1>
+<table border="1px" padding="" align="center">
+<form action="" method="post" >
+    {% csrf_token %}
+    <tr>
+        <th> Name </th>
+        <td><input type="text" name="name" /></td>
+    </tr>
+   <br>
+   <tr>
+        <th>Mobile_NO </th>
+        <td><input type="text" name="mob" /></td>
+   </tr>
+    <br>
+    <tr>
+        <th>Course </th>
+        <td><select name="course"><br>
+            <option>---------</option>
+            <option>Java FullStack</option>
+            <option>Python FullStack</option>
+            <option>Mern</option>
+            <option>Mean</option>
+            <option>Java core&adv</option>
+            <option>Spring&hibernate</option>
+            <option>Python core&advance</option>
+            <option>Django&Rest</option>
+            <option>Blockchain</option>
+            <option>Oracle</option>
+            <option>WebDesigning</option>
+            <option>React</option>
+<option>Angular</option>
+            <option>Data analytics/Science</option>
+            <option>C&C++</option>
+            <option>Dsa</option>
+        </select>
+        </td>
+   </tr>
+    <br>
+    <tr>
+        <th>Address</th>
+        <td><input type="text" name="add" /></td>
+    </tr>
+    <br>
+    <tr>
+        <th>From_Date</th>
+        <td><input type="date" name="fdt" /></td>
+    </tr>
+    <br>
+    <tr>
+        <th>To_Date</th>
+        <td><input type="date" name="tdt" /></td>
+    </tr>
+    <br>
+    <tr>
+        <th>Dues</th>
+        <td><select name="dues"><br>
+            <option>Remaining_Dues</option>
+            <option>No_Dues</option>
+        </select>
+    </td>
+    </tr>
+    <br>
+    <tr>
+    <td colspan="2"> <center>
+    <input type='submit' value="Search"/></center>
+    </td>
+    </tr>
+</form></table>
+{%endblock%}
